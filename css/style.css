@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+nav {
+    text-align: center;
+}
+
+footer {
+    color: rgb(20, 20, 200);
+    text-align: center;
+}
+
+main {
+    height: auto;
+    width: auto;
+}
+
+button:hover {
+   background:rgba(17, 17, 216, 0.208)
+}
+
+input {
+    margin: 20px 0 0 100px;
+}
+
+input:hover {
+    background: rgba(17, 17, 216, 0.208);
+}
