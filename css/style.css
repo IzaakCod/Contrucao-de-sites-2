@@ -8,6 +8,7 @@ nav {
 }
 
 footer {
+    margin-top: 50px;
     color: rgb(20, 20, 200);
     text-align: center;
 }
@@ -17,12 +18,33 @@ main {
     width: auto;
 }
 
+#itens {
+    padding: 0 24px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 15px;
+    padding: 7px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    background: rgba(34, 242, 238, 0.086) 
+}
+
+.item div {
+    display: flex;
+    gap: 10px ;
+}
+
 button:hover {
    background:rgba(17, 17, 216, 0.208)
 }
 
 input {
-    margin: 20px 0 0 100px;
+    margin: 30px 0 50px 100px;
 }
 
 input:hover {
