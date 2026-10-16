@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bd1745">
+    <title>Vitrine | Moda & estilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#inicio">Vitrine<span>.</span></a>
+        <nav class="nav-links" aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#categorias">Categorias</a>
+            <a href="#cadastro">Cadastrar item</a>
+            <a href="#produtos">Produtos</a>
+        </nav>
+        <p id="bemVindo" class="welcome">Seja bem-vindo(a)!</p>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-copy">
+                <span class="eyebrow">Sempre com novos itens</span>
+                <h1>Seu estilo,<br>do seu jeito.</h1>
+                <p>Encontre produtos que só estão esperando por você e descubra novos favoritos para todos os momentos.</p>
+                <a class="hero-button" href="#produtos">Explorar produtos <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="hero-photo" role="img" aria-label="Modelo com look contemporâneo"></div>
+        </section>
+
+        <section class="categories section-wrap" id="categorias">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow pink">Explore</span>
+                    <h2>Compre por categoria</h2>
+                </div>
+                <p>Um mundo de possibilidades<br>em um só lugar.</p>
+            </div>
+            <div id="categoriasLista" class="category-list" aria-label="Filtrar produtos por categoria"></div>
+        </section>
+
+        <section class="register section-wrap" id="cadastro">
+            <div class="register-intro">
+                <span class="eyebrow">Sua vitrine</span>
+                <h2>Cadastre um produto</h2>
+                <p>Adicione um novo produto com apenas algumas perguntas.</p>
+            </div>
+            <form id="formProduto">
+                <label>
+                    Nome do produto
+                    <input id="novoProduto" type="text" placeholder="Ex.: Jaqueta jeans" required>
+                </label>
+                <label>
+                    Descrição
+                    <input id="descricaoProduto" type="text" placeholder="Conte um pouco sobre a peça" required>
+                </label>
+                <label>
+                    Categoria
+                    <input id="categoriaProduto" type="text" placeholder="Ex.: roupas femininas" required>
+                </label>
+                <label>
+                    Preço (R$)
+                    <input id="precoProduto" type="number" min="0.01" step="0.01" placeholder="0,00" required>
+                </label>
+                <label class="image-field">
+                    Imagem (opcional)
+                    <input id="imagemProduto" type="url" placeholder="https://... (URL da imagem)">
+                </label>
+                <button type="submit" class="add-button">
+                    Adicionar à vitrine <span>+</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="catalog section-wrap" id="produtos">
+            <div class="section-heading catalog-heading">
+                <div>
+                    <span class="eyebrow pink">Nossa vitrine</span>
+                    <h2>Peças para se apaixonar</h2>
+                </div>
+                <span id="contadorProdutos" class="product-count"></span>
+            </div>
+            <div id="itens" class="product-grid" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>Feito por Izaak e Lucas <span>© 2026</span></footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+:root {
+    --wine: #bd1745;
+    --wine-dark: #941035;
+    --rose: #f8e8e9;
+    --ink: #282126;
+    --muted: #81777a;
+    --paper: #fffaf8;
+    --line: #f0e5e3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.topbar {
+    height: 76px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--wine);
+    color: white;
+}
+
+.brand {
+    font: 800 29px "Playfair Display", serif;
+    letter-spacing: -1px;
+}
+
+.brand span {
+    color: #ffb3ae;
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+    font-size: 13px;
+}
+
+.nav-links a {
+    opacity: 0.88;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.welcome {
+    color: #ffe1e4;
+    font-size: 12px;
+}
+
+/* Destaque principal */
+.hero {
+    position: relative;
+    min-height: 430px;
+    overflow: hidden;
+    padding: 78px 7%;
+    background: linear-gradient(110deg, #bd1745, #ce1d4c 54%, #e56577);
+    color: white;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 510px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 15px;
+    color: #ffd1d3;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0 0 18px;
+    font: 800 clamp(44px, 6vw, 68px)/0.99 "Playfair Display", Georgia, serif;
+    letter-spacing: -1.5px;
+}
+
+.hero-copy p {
+    max-width: 385px;
+    margin: 0 0 25px;
+    color: #ffe3e5;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 13px 19px;
+    border-radius: 30px;
+    background: white;
+    color: var(--wine);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero-button span {
+    font-size: 18px;
+}
+
+.hero-photo {
+    position: absolute;
+    right: 8%;
+    bottom: -75px;
+    width: min(43vw, 510px);
+    height: 410px;
+    clip-path: ellipse(48% 49% at 50% 50%);
+    background: #f49aa0 url("img/Coleção Vibrante de Estilo e Bem-Estar.png") center 28% / cover no-repeat;
+}
+
+/* Categorias e títulos das seções */
+.section-wrap {
+    width: 88%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.categories {
+    padding: 55px 0 42px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.section-heading h2,
+.register h2 {
+    margin: 0;
+    font: 700 30px/1.1 "Playfair Display", Georgia, serif;
+}
+
+.section-heading > p {
+    margin: 0 0 2px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.pink {
+    margin-bottom: 8px;
+    color: var(--wine);
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 12px;
+}
+
+.category-chip {
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+}
+
+.category-chip:hover,
+.category-chip.active {
+    border-color: #df7690;
+    background: #fff0f1;
+}
+
+.category-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--rose);
+    color: var(--wine);
+    font-size: 18px;
+}
+
+.category-chip strong {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.category-chip small {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* Cadastro do produto */
+.register {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 65px;
+    padding: 30px;
+    border-radius: 18px;
+    background: #f8e9e9;
+}
+
+.register-intro .eyebrow {
+    color: var(--wine);
+}
+
+.register-intro h2 {
+    font-size: 28px;
+}
+
+.register-intro p {
+    max-width: 230px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.register form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.register label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #54464a;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.register input {
+    width: 100%;
+    height: 40px;
+    padding: 0 11px;
+    border: 1px solid #ead7d8;
+    border-radius: 8px;
+    outline: none;
+    background: white;
+    font: 12px "DM Sans", sans-serif;
+}
+
+.register input:focus {
+    border-color: var(--wine);
+}
+
+.image-field {
+    grid-column: 1;
+}
+
+.add-button {
+    min-height: 40px;
+    align-self: end;
+    border: 0;
+    border-radius: 8px;
+    background: var(--wine);
+    color: white;
+    cursor: pointer;
+    font: 700 12px "DM Sans", sans-serif;
+}
+
+.add-button:hover {
+    background: var(--wine-dark);
+}
+
+.add-button span {
+    margin-left: 8px;
+    font-size: 17px;
+}
+
+/* Lista de produtos */
+.catalog {
+    padding: 18px 0 65px;
+}
+
+.catalog-heading {
+    margin-bottom: 24px;
+}
+
+.product-count {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.product-card {
+    overflow: hidden;
+    border: 1px solid #f1e6e4;
+    border-radius: 13px;
+    background: white;
+}
+
+.product-image-wrap {
+    position: relative;
+    height: 255px;
+    overflow: hidden;
+    background: #f7e9e6;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: white;
+    color: var(--wine);
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.product-info {
+    padding: 14px;
+}
+
+.product-info h3 {
+    margin: 0 0 6px;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.product-description {
+    height: 30px;
+    overflow: hidden;
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    color: var(--wine);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.card-actions button {
+    padding: 7px 9px;
+    border: 0;
+    border-radius: 7px;
+    background: #fbf0f1;
+    color: var(--wine);
+    cursor: pointer;
+    font: 600 10px "DM Sans", sans-serif;
+}
+
+.card-actions button:hover {
+    background: #f5dce0;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 40px;
+    color: var(--muted);
+    text-align: center;
+}
+
+footer {
+    padding: 22px 6%;
+    background: #2d2024;
+    color: #f6dfe2;
+    font-size: 11px;
+    text-align: center;
+}
+
+footer span {
+    margin-left: 8px;
+    color: #cbaeb4;
+}
+
+/* Ajustes para tablets e celulares */
+@media (max-width: 900px) {
+    .welcome {
+        display: none;
+    }
+
+    .hero-photo {
+        right: -2%;
+        width: 48vw;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .product-image-wrap {
+        height: 220px;
+    }
+
+    .register {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .register-intro p {
+        max-width: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .topbar {
+        height: auto;
+        min-height: 68px;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 14px 6%;
+    }
+
+    .brand {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 58px 7%;
+    }
+
+    .hero-copy {
+        max-width: 85%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-copy p {
+        max-width: 280px;
+        font-size: 13px;
+    }
+
+    .hero-photo {
+        right: -20px;
+        bottom: -55px;
+        width: 70vw;
+        height: 270px;
+        opacity: 0.5;
+    }
+
+    .section-wrap {
+        width: 88%;
+    }
+
+    .categories {
+        padding: 39px 0 30px;
+    }
+
+    .section-heading h2,
+    .register h2 {
+        font-size: 25px;
+    }
+
+    .section-heading > p {
+        font-size: 10px;
+    }
+
+    .category-list {
+        display: flex;
+        overflow-x: auto;
+        padding: 2px 2px 10px;
+    }
+
+    .category-chip {
+        min-width: 155px;
+    }
+
+    .catalog {
+        padding: 10px 0 45px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .product-image-wrap {
+        height: 190px;
+    }
+
+    .product-info {
+        padding: 11px;
+    }
+
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+    .product-description {
+        height: 28px;
+    }
+
+    .card-actions {
+        gap: 4px;
+    }
+
+    .card-actions button {
+        padding: 7px 6px;
+        font-size: 9px;
+    }
+
+    .register {
+        margin-bottom: 40px;
+        padding: 22px 18px;
+    }
+
+    .register form {
+        grid-template-columns: 1fr;
+    }
+
+    .image-field {
+        grid-column: auto;
+    }
+
+    .add-button {
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 380px) {
+    .product-image-wrap {
+        height: 160px;
+    }
+
+    .card-actions {
+        flex-wrap: wrap;
+    }
+
+    .section-heading > p {
+        display: none;
+    }
+}
