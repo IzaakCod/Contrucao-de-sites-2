@@ -27,7 +27,7 @@ O objetivo foi colocar em prática conhecimentos de HTML, CSS e JavaScript, trab
 
 <div align="center">
 
-![Demonstração da Vitrine](demo-vitrine.gif)
+<img src="./demo-vitrine.gif" width="85%" alt="Demonstração da Vitrine">
 
 </div>
 
